@@ -1,4 +1,3 @@
-import { emailQueue, emailQueueName } from "../jobs/SendEmailQueueJobs.js";
 import { v4 as uuid } from "uuid";
 import { sendEmail } from "../config/mailer.js";
 import db from "../Database/db.config.js";

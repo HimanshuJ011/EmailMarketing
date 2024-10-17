@@ -18,8 +18,6 @@ app.get("/", (req, res) => {
 
 app.use("/api", apiRoutes);
 
-// Jobs Import
-import "./jobs/index.js";
 
 app.listen(PORT, () => {
   console.log(`Server is running ${PORT}`);
