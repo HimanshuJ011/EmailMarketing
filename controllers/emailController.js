@@ -11,12 +11,14 @@ export const sendTestEmail = async (req, res) => {
       return res.status(400).json({ message: "Email is required" });
     }
 
+     const trackingUrl = `${process.env.BASE_URL}/api/track/${trackingID}`;
     // Construct the email body with a tracking pixel
     const emailBody = `
       <h1>Hello, this is a testing Email. Thank you!</h1>
       <p>This email is used for tracking purposes.</p>
-      <img src="${process.env.BASE_URL}/api/track/${trackingID}" alt="Tracking Pixel" style="display:none;" />
+      <img src="${trackingUrl}" alt="Tracking Pixel" style="display:none;" />
     `;
+
 
     const payload = {
       toEmail: email,
