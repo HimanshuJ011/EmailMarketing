@@ -5,7 +5,7 @@ import cors from "cors";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -22,5 +22,5 @@ app.use("/api", apiRoutes);
 import "./jobs/index.js";
 
 app.listen(PORT, () => {
-  console.log(`Server is running `);
+  console.log(`Server is running ${PORT}`);
 });
