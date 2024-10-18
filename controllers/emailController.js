@@ -12,6 +12,7 @@ export const sendTestEmail = async (req, res) => {
     }
 
      const trackingUrl = `${process.env.BASE_URL}/api/track/${trackingID}`;
+     console.log("Tracking URL:", trackingUrl);
     // Construct the email body with a tracking pixel
     const emailBody = `
       <h1>Hello, this is a testing Email. Thank you!</h1>
